@@ -1,0 +1,130 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Josefin+Slab:wght@600&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Josefin+Slab:wght@600&family=Qwitcher+Grypen:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@900&family=Handlee&family=Josefin+Slab:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;900&family=Handlee&display=swap");
+:root {
+  --color1: #140f2d;
+  --color2: #f22b29;
+  --darkModeButtonColor: #376996;
+  --signatureColor: #f22b29;
+}
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  font-weight: normal;
+  /* font-family: "Handlee", cursive; */
+  /* font-family: "Josefin Slab", serif; */
+  font-family: "Exo 2", sans-serif;
+  /* font-family: 'Pacifico', cursive; */
+}
+body {
+  zoom: 80%;
+  margin: 0;
+  padding: 0;
+  /* background: linear-gradient(to right, #0b132b, #6fffe9); */
+  /* background: linear-gradient(to right, #26272e, #5ae4e7); */
+  background: linear-gradient(to right, var(--color1), var(--color2));
+  /* background: linear-gradient(to right, #140f2d, #f22b29); */
+}
+.container {
+  margin-block: 50px;
+  margin-inline: auto;
+  background: linear-gradient(to left, #0b132b, #212529);
+  padding-block: 40px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.toggleDarkModeButton {
+  margin-left: 1090px;
+  margin-top: -25px;
+}
+.toggleDarkModeButton button {
+  padding: 5px 10px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: var(--darkModeButtonColor);
+  border: none;
+  box-shadow: 0 9px #999;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.toggleDarkModeButton button:active {
+  /* background-color: #3e8e41; */
+  box-shadow: 0 4.5px #666;
+  transform: translateY(4px);
+}
+.toggleDarkModeButton fa-icon {
+  font-size: 40px;
+  background-color: transparent;
+}
+.toggleDarkModeButton.LightMode {
+  display: none;
+  background-color: black;
+}
+.calculator {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  width: 500px;
+  margin-inline: auto;
+  border: 5px solid black;
+}
+.calculator .buttons {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 80px);
+}
+.calculator .output {
+  min-height: 200px;
+  word-break: break-all;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, 2fr, 1fr, 2fr, 3fr);
+  border-bottom: 5px solid black;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+}
+.calculator .output div {
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 20px;
+}
+.calculator .output div:last-of-type {
+  color: white;
+  font-size: 35px;
+  text-align: right;
+}
