@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="container">
+  <div class="toggleDarkModeButton">
+    <button (click)="pressAMButton()"><fa-icon [icon]="sunIcon"></fa-icon></button>
+  </div>
+  <div class="calculator">
+    <div class="output">
+      <div class="previous-operand">
+        {{ this.calcFields.firstNum }}
+      </div>
+      <div class="operation">{{ this.calcFields.op }}</div>
+      <div class="current-operand">{{ this.calcFields.secondNum }}</div>
+      <div class="ans">{{ this.calcFields.ans }}</div>
+    </div>
+    <div class="buttons">
+      <app-button
+        (click)="press(button)"
+        *ngFor="let button of buttonsArrayPro"
+        [Val]="button.Val"
+        [type]="button.type"
+        [content]="button.content"
+      ></app-button>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

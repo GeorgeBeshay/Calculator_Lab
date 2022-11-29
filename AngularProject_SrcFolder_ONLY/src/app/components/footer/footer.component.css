@@ -1,0 +1,30 @@
+.footerDiv {
+  background: linear-gradient(to left, #0b132b, #212529);
+  margin-block: 40px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signature {
+  text-align: center;
+  font-family: "Exo 2", sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+}
+.signature a {
+  text-decoration: none;
+  /* font-family: inherit; */
+  font-family: 'Pacifico', cursive;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.signature a:hover {
+  font-size: 70px;
+  color: var(--signatureColor);
+  /* color: #f22b29; */
+  /* color: #0466c8; */
+}
